@@ -1,4 +1,4 @@
-# 🐍 AI Snake Game: Q-Learning Agent 
+# 🐍 AI Snake Game: Q-Learning Agent  
  
 ## 📌 Project Overview
 An autonomous AI agent trained to play the classic Snake game using **Reinforcement Learning (Q-Learning)**. Instead of hardcoded rules, the agent learns optimal strategies through trial, error, and a reward-based system, successfully balancing exploration (random moves) and exploitation (using trained knowledge).
