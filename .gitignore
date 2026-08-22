@@ -1,0 +1,108 @@
+# ==========================================
+# 1. SECRETS & API KEYS (Most Critical 🚨)
+# ==========================================
+# Yeh main file hai jahan passwords aur API keys hoti hain, isay block karna sab se zaroori hai.
+.env
+
+# Agar aap .env.local ya .env.backup jaisi files banate hain, toh yeh star (*) un sab ko block kar dega.
+.env.*
+
+# Yeh security certificates aur cryptographic keys hoti hain, inhein public nahi karna chahiye.
+*.pem
+
+# Cloud platforms (jaise GCP) aksar secrets is JSON file mein save karte hain, isay block karna zaroori hai.
+secrets.json
+
+# Agar file ka naam secret hai aur uski koi bhi extension ho (jaise secret.txt, secret.json)
+secret.*
+
+# Agar file ka naam secrets hai (jaise Streamlit projects mein aam taur par secrets.toml use hoti hai)
+secrets.*
+
+# Agar aap file ke naam ke aakhir mein secret likhte hain (jaise twitter_secret.txt ya db_secrets.json)
+*secret*.*
+
+# Google/AWS ke login credentials is file mein hotay hain, hacker se bachane ke liye block karte hain.
+credentials.json
+
+
+# ==========================================
+# 2. VIRTUAL ENVIRONMENTS (Folders 📦)
+# ==========================================
+# Standard Python virtual environment folder ko block karta hai taake 100MB+ data upload na ho.
+venv/
+
+# Hidden virtual environment folder (jo dot se shuru hota hai) ko block karta hai.
+.venv/
+
+# Aapke apne custom naam wale virtual environment folder ko block karta hai.
+myvenv/
+
+# Ek aur aam naam jo developers environment folder ke liye use karte hain, isay bhi block kiya.
+env/
+
+# Agar environment ghalti se .env naam ke folder mein ban jaye, toh yeh usay block karta hai.
+.env/
+
+# Windows par virtual environment ke andar banne wale default C++ aur Python include folders ko block karta hai.
+Include/
+
+# Virtual environment ki heavy library files (site-packages) wale folder ko block karta hai.
+Lib/
+
+# Virtual environment ke executables (jaise pip, python.exe) wale folder ko block karta hai.
+Scripts/
+
+
+# ==========================================
+# 3. PYTHON CACHE & SYSTEM FILES (Junk 🗑️)
+# ==========================================
+# Python code run hone ke baad jo auto-generated compiled junk files banti hain, inhein block karta hai.
+__pycache__/
+
+# Compiled, optimized, aur debug Python files ko block karta hai kyunke yeh doosre PC par nahi chaltin.
+*.py[cod]
+
+# Agar Python Java ke sath use ho (Jython), toh uski class files ko block karta hai.
+*$py.class
+
+# Python code testing (pytest) ke dauran banne wali temporary cache files ko block karta hai.
+.pytest_cache/
+
+
+# ==========================================
+# 4. DATA, DATABASES & LOGS (Heavy Files 🗄️)
+# ==========================================
+# Comma-separated data files (datasets) ko block karta hai jo bohot heavy ho sakti hain.
+*.csv
+
+# Excel sheets ko block karta hai (jaise aapki Q_Table.xlsx), kyunke Git code ke liye hai, data ke liye nahi.
+*.xlsx
+
+# Local databases ko block karta hai taake user ka personal data GitHub par na jaye.
+*.db
+
+# SQLite database files ko block karta hai taake local app ka data secure aur hidden rahe.
+*.sqlite3
+
+# System errors aur activity record karne wali text files (logs) ko block karta hai.
+*.log
+
+
+# ==========================================
+# 5. IDE & OS FILES (VS Code, Mac, Windows 💻)
+# ==========================================
+# VS Code ki aapki personal settings (colors, themes) block karta hai, taake doosre developers disturb na hon.
+.vscode/
+
+# PyCharm ya IntelliJ IDE ki workspace settings ko block karta hai.
+.idea/
+
+# Mac OS ki hidden files jo folder ki setting save karti hain, code ke liye inka koi faida nahi.
+.DS_Store
+
+# Windows mein images ke auto-generated thumbnails ki file ko block karta hai.
+Thumbs.db
+
+# Jupyter Notebook ke auto-save checkpoints ko block karta hai taake repo clean rahe.
+.ipynb_checkpoints/
