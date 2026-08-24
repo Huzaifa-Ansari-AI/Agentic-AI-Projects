@@ -8,7 +8,7 @@
 .env.*
 
 # Yeh security certificates aur cryptographic keys hoti hain, inhein public nahi karna chahiye.
-*.pem
+#*.pem
 
 # Cloud platforms (jaise GCP) aksar secrets is JSON file mein save karte hain, isay block karna zaroori hai.
 secrets.json
