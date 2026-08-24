@@ -2,7 +2,7 @@ import pygame
 import random  
 import numpy as np  
 
-# Initialize pygame 
+# Initialize pygame
 pygame.init()
 
 WIDTH = 300
